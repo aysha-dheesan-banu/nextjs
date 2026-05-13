@@ -55,6 +55,21 @@ export default function LoginPage() {
           </button>
         </form>
 
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: '24px 0' }}>
+          <div style={{ flex: 1, height: '1px', background: 'var(--glass-border)' }}></div>
+          <span style={{ fontSize: '12px', color: '#94a3b8', textTransform: 'uppercase' }}>Or continue with</span>
+          <div style={{ flex: 1, height: '1px', background: 'var(--glass-border)' }}></div>
+        </div>
+
+        <button 
+          onClick={() => signIn('wytpass', { callbackUrl: '/dashboard' })}
+          className="btn btn-outline" 
+          style={{ width: '100%', justifyContent: 'center', gap: '12px' }}
+        >
+          <img src="https://wytnet.com/logo.png" alt="WytPass" style={{ width: '20px', height: '20px' }} />
+          Sign in with WytPass
+        </button>
+
         <p style={{ marginTop: '24px', textAlign: 'center', color: '#94a3b8' }}>
           Don't have an account? <Link href="/signup" style={{ color: 'var(--primary)' }}>Sign Up</Link>
         </p>
