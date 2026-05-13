@@ -12,7 +12,7 @@ COPY . .
 # Build the application
 # Note: Next.js telemetry is disabled during the build
 ENV NEXT_TELEMETRY_DISABLED 1
-RUN npm run build
+RUN mkdir -p public && npm run build
 
 # Stage 2: Runner
 FROM node:20-alpine AS runner
